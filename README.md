@@ -1,2 +1,2 @@
 # Full-Stack
-Choose a folder to choose a topic.
+Choose a directory to choose a topic.
