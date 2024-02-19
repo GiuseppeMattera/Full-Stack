@@ -1,0 +1,44 @@
+.card {
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    width: 280px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card__header-img {
+    height: 200px;
+    width: 280px;
+}
+
+.card__article {
+    border: 0.5px solid gray;
+}
+
+
+.card__article-t {
+    padding-left: 15px;
+}
+
+.card__article-p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card__item {
+    border: 0.5px solid grey;
+    height: 35px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.card__footer-link {
+    border: 0.5px solid grey;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card__footer-link > a {
+    margin-right: 20px;
+}
+

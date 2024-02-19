@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 class="title_card"></h2>
+        <img class="img_card" alt="image">
+    </div>
+
+    <script>
+        const $title = document.querySelector(".title_card");
+        const $img = document.querySelector(".img_card");
+
+        async function fetchData() {
+            try {
+                const response = await fetch('https://ringsdb.com/api/public/card/01001.json?_format=json%27');
+                const responseJson = await response.json();
+
+                const title = responseJson.name;
+                // INSERISCO UNA STRINGA INIZIALE ALLA CHIAVE IMAGESRC PERCHE' MANCA IL DOMINIO DELL' URL NEL DATO
+                const imgSrc = `https://ringsdb.com/${responseJson.imagesrc}`;
+
+                $title.innerText = title;
+                $img.setAttribute('src', imgSrc);
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>

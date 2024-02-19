@@ -1,0 +1,135 @@
+@media (min-width: 768px) {
+    body {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 375px) {
+    body {
+        display: inline;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 12px;
+}
+
+p > span {
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    margin: 20px;
+}
+
+.card__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(144, 144, 144);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card__top-left {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 85%;
+}
+
+.card__top-left-avatar {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    margin: 3px 10px;
+}
+
+.card__top-left-identity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 75%;
+    font-size: 12px;
+}
+
+.card__top-right {
+    margin-top: 5px;
+    width: 50%;
+    height: 85%;
+    margin-right: 5px;
+}
+
+.card__top-right-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card__top-right-option > span {
+    margin: 5px;
+    width: 5%;
+    height: 20%;
+    background-color: rgb(48, 48, 48);
+    border-radius: 50%;
+}
+
+.card__center {
+    height: 60%;
+    width: 100%;
+}
+
+.card__center-img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__center-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card__bottom-icon {
+    margin: 20px;
+    width: 18%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__bottom-description {
+    padding: 5px 10px;
+}
+
+

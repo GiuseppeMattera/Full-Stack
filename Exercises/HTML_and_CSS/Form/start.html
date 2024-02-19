@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Form Lesson</title>
+  <style>
+    label {
+      display: block;
+    }
+
+    .plane_div {
+      display: flex;
+      flex-direction: row;
+    }
+
+    input:invalid {
+      border: 1px solid red;
+    }
+
+    input:valid {
+      border: 1px solid black;
+    }
+
+    .legend_class {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+  <body>
+    <div>
+      <form>
+        <div>
+          <label for="form_name">Name<abbr title="required">*</abbr></label>
+          <input type="text" id="form_name" name="name" placeholder="Es. John" required pattern="[A-Za-z]+" minlength="2" maxlength="20">
+        </div>
+        <div>
+          <label for="form_lastname">Lastname<abbr title="required">*</abbr></label>
+          <input type="text" id="form_lastname" name="lastname" placeholder="Es. Smith" required pattern="[A-Za-z]+" minlength="2" maxlength="20">
+        </div>
+        <div>
+          <label for="form_birthdate">Birth date<abbr title="required">*</abbr></label>
+          <input type="date" id="form_birthdate" name="birth_date" required>
+        </div>
+        <div>
+          <label for="form_email">E-mail<abbr title="required">*</abbr></label>
+          <input type="email" id="form_email" name="e-mail" placeholder="johnsmith@gmail.com" required>
+        </div>
+        <div>
+          <label for="form_password">Password<abbr title="required">*</abbr></label>
+          <input type="password" id="form_password" name="Password" placeholder="My-password" required>
+        </div>
+        <div>
+          <label for="form_phone-number">Telephone number (optional)</label>
+          <input type="number" id="form_phone-number" name="phone_number" placeholder="333-3333333">
+        </div>
+        <br>
+        <div>
+          <label for="form_purchase-plan">Choose your plane</label>
+          <select id="form_purchase-plan" name="purchase_plan">
+            <option value="free_plane">Free plane</option>
+            <optgroup label="Subscription">
+              <option value="first_real_plane">First real plane</option>
+              <option value="second_real_plane">Second real plane</option>
+            </optgroup>
+          </select>
+        </div>
+          <br>
+          <br>
+          <div class="plane_div" id="checkbox_plane">
+            <input type="checkbox" id="form_pro-plane" name="Pro_Plane" value="pro_plane">
+            <label for="form_pro-plane">Check Here If You Want a Pro Plane</label>
+          </div>
+          <br>
+          <div>
+            <label for="form_credit_card_number">Credit Card Number:</label>
+            <input type="number" id="form_credit_card_number" name="credit-card-number" required maxlength="16">
+          </div>
+          <div>
+            <label for="form_cvc">CVC:</label>
+            <input type="number" id="form_cvc" name="cvc" required maxlength="3">
+          </div>
+          <div>
+            <label for="form_expiration-date">Expiration date</label>
+            <input type="date" id="form_expiration-date" name="expiration_date" required>
+          </div>
+          <div>
+            <label for="form_address">Address:</label>
+            <input type="text" id="form_address" name="address" placeholder="31th Street Avenue" required>
+          </div>
+          <br>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+  </body>
+</html>

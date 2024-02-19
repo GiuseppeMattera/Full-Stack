@@ -1,0 +1,77 @@
+.grid {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+        "sum sum sum sum"
+        "operator operator operator operator"
+        "number number number equals"
+        "number number number equals"
+        "number number number equals"
+        "number number number equals";
+}
+
+.grid__sum {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    grid-area: sum;
+    background-color: grey;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.grid__sum > div {
+    padding-right: 10px;
+}
+
+.grid__operator {
+    display: flex;
+    justify-content: space-between;
+    grid-area: operator;
+    background-color: rgb(187, 187, 187);
+}
+
+.grid__operator > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+}
+
+.grid__number {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: number;
+    background-color: rgb(225, 225, 225);
+    border-bottom-left-radius: 10px;
+}
+
+.grid__number > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+}
+
+.grid__equals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 139, 139);
+    grid-area: equals;
+    border-bottom-right-radius: 10px;
+    border-top: 2px solid grey;
+}
+
+
