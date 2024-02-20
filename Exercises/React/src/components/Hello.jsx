@@ -1,7 +1,12 @@
+import Message from "./Message";
+
 const Hello = () => {
     return (
         <>
-            <h2>Hello, World!</h2>
+            <div className="flex flex-col">
+                <h2>Hello, World!</h2>
+                <Message />
+            </div>
         </>
     )
 }
