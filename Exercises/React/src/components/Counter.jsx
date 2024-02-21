@@ -1,10 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import CounterDisplay from './CounterDisplay'
 
 const Counter = ({ initialValue = 0, incrementAmount = 1, decrementAmount = incrementAmount }) => {
-	const [counter, setCounter] = useState(initialValue)
+	const [counter, setCounter] = useState(initialValue);
+    const refCounter = useRef("");
 
     useEffect(() => {
+        if(counter > initialValue) {
+            refCounter.current = "up";
+            console.log(refCounter.current);
+        }
+        
+        if(counter < initialValue) {
+            console.log("down");
+        }
 		console.log(counter);
 	}, [counter]);
 
@@ -65,3 +74,8 @@ export default Counter;
 
 // Add a side effect to the Counter component from State - 1 exercise that prints the current value 
 // of the counter inside of the console.
+
+// Modify the Counter component so that whenever the value of the counter changes, the value of a ref is updated 
+// to contain the direction of the change (i.e. "up" or "down") relative to the initialValue prop.
+// Print the value of the ref to the console only when it's different from the previous value.
+

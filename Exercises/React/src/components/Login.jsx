@@ -32,7 +32,7 @@ const Login = () => {
     return (
         <>
             <form onSubmit={handleLogin}>
-                <h2>Login</h2>
+                <h2>Controlled Login</h2>
                 <input className="bg-gray-50 border border-black text-gray-900 text-sm rounded-lg 
                         focus:ring-blue-500 focus:border-blue-500 block w-[200px] px-2 m-2" name="username" 
                         onChange={handleInputChange} value={data.username} />
