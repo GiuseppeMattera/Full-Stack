@@ -2,6 +2,8 @@ import AllertClock from "./components/AllertClock";
 import Clock from "./components/Clock";
 import Counter from "./components/Counter";
 import Hello from "./components/Hello"
+import InteractiveWelcome from "./components/InteractiveWelcome";
+import Login from "./components/Login";
 import Message from "./components/Message";
 import MouseClicker from "./components/MouseClicker";
 import Prova from "./components/ProvaSvg";
@@ -25,6 +27,8 @@ const App = () => {
                 <Prova />
                 <Clock />
                 <MouseClicker />
+                <InteractiveWelcome />
+                <Login />
             </div>
         </>
     )
