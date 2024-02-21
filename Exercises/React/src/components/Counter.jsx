@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CounterDisplay from './CounterDisplay'
 
 const Counter = ({ initialValue = 0, incrementAmount = 1, decrementAmount = incrementAmount }) => {
 	const [counter, setCounter] = useState(initialValue)
+
+    useEffect(() => {
+		console.log(counter);
+	}, [counter]);
 
 	function handleIncrement() {
 		setCounter((c) => c + incrementAmount)
@@ -55,3 +59,9 @@ export default Counter;
 // Add a decrement button and a reset button to the Counter component. The decrement button should decrement 
 // the counter by the amount passed as a prop, and the reset button should reset the counter to the initial 
 // value passed as a prop.
+
+// Add a side effect to the Counter component from State - 1 exercise that prints the current value 
+// of the counter inside of the console.
+
+// Add a side effect to the Counter component from State - 1 exercise that prints the current value 
+// of the counter inside of the console.

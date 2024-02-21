@@ -1,7 +1,9 @@
 import AllertClock from "./components/AllertClock";
+import Clock from "./components/Clock";
 import Counter from "./components/Counter";
 import Hello from "./components/Hello"
 import Message from "./components/Message";
+import Prova from "./components/ProvaSvg";
 import Welcome from "./components/Welcome";
 
 const App = () => {
@@ -19,6 +21,8 @@ const App = () => {
                 <Welcome name={<strong>Giuseppe</strong>} age="30" />
                 <AllertClock onClick={HandleShowTime} label={"Click me for the current time!"}/>
                 <Counter />
+                <Prova />
+                <Clock />
             </div>
         </>
     )
