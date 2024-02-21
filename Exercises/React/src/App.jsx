@@ -3,6 +3,7 @@ import Clock from "./components/Clock";
 import Counter from "./components/Counter";
 import Hello from "./components/Hello"
 import Message from "./components/Message";
+import MouseClicker from "./components/MouseClicker";
 import Prova from "./components/ProvaSvg";
 import Welcome from "./components/Welcome";
 
@@ -23,6 +24,7 @@ const App = () => {
                 <Counter />
                 <Prova />
                 <Clock />
+                <MouseClicker />
             </div>
         </>
     )
