@@ -2,6 +2,7 @@ import AllertClock from "./components/AllertClock";
 import Clock from "./components/Clock";
 import Color from "./components/Color";
 import Colors from "./components/Colors";
+import Container from "./components/Container";
 import Counter from "./components/Counter";
 import FocusableInput from "./components/FocusableInput";
 import Hello from "./components/Hello"
@@ -44,6 +45,8 @@ const App = () => {
                     {id: 4, name: "White"},
                 ]} />
                 <TodoList />
+                <Container title={"Titolo Casuale"} 
+                    children={<p>Clicca sul titolo per far scomparire questo paragrafo</p>}/>
             </div>
         </>
     )

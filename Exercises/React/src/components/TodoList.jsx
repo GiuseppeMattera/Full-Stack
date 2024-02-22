@@ -15,9 +15,11 @@ const TodoList = () => {
 		setTodos([])
 	}
 
-    const DeleteItem = () => {
-        console.log(todos);
-    }
+    const handleRemoveTodo = (index) => {
+        const updatedTodos = [...todos];
+        updatedTodos.splice(index, 1);
+        setTodos(updatedTodos);
+    };
 
 	return (
 		<div>
@@ -41,7 +43,7 @@ const TodoList = () => {
                     <>
                         <div key={index} className="flex gap-2">
                             <li>{todo}</li>
-                            <button onClick={DeleteItem} className="me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none 
+                            <button onClick={() => handleRemoveTodo(index)} className="me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none 
                                 bg-white rounded-lg border border-red-600 hover:bg-gray-100 hover:text-blue-700 
                                 focus:z-10 focus:ring-4 focus:ring-gray-100">
                                 REMOVE
