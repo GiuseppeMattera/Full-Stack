@@ -19,14 +19,14 @@ let planets = [
 ];
 
 app.get('/api/planets', (req, res) => {
-  res.status(200).json(planets)
+  res.status(200).json(planets);
 });
 
 app.get('/api/planets/:id', (req, res) => {
   const { id } = req.params;
   const planet = planets.find((element) => element.id === Number(id));
 
-  res.status(200).json(planet)
+  res.status(200).json(planet);
 });
 
 app.post('/api/planets', (req, res) => {
@@ -35,6 +35,21 @@ app.post('/api/planets', (req, res) => {
   planets = [...planets, newPlanet];
 
   res.status(201).json({ msg: "New planet created" });
+});
+
+app.put('/api/planets/:id', (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  planets = planets.map((element) => element.id === Number(id) ? ({...element, name}) : element);
+
+  res.status(200).json({ msg: "Planet updated" });
+});
+
+app.delete('/api/planets/:id', (req, res) => {
+  const { id } = req.params;
+  planets = planets.filter((element) => element.id !== Number(id));
+
+  res.status(200).json({ msg: "Planet deleted" });
 });
 
 app.listen(port, () => {
