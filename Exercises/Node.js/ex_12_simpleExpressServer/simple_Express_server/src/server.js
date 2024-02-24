@@ -5,6 +5,7 @@ const app = express();
 const port = 3000;
 
 app.use(morgan("dev"));
+app.use(express.json());
 
 let planets = [
   {
@@ -26,6 +27,14 @@ app.get('/api/planets/:id', (req, res) => {
   const planet = planets.find((element) => element.id === Number(id));
 
   res.status(200).json(planet)
+});
+
+app.post('/api/planets', (req, res) => {
+  const { id, name } = req.body;
+  const newPlanet = { id, name };
+  planets = [...planets, newPlanet];
+
+  res.status(201).json({ msg: "New planet created" });
 });
 
 app.listen(port, () => {
