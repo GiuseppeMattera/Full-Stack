@@ -17,6 +17,8 @@ import TodoList from "./components/TodoList";
 import UncontrolledLogin from "./components/UncontrolledLogin";
 import Welcome from "./components/Welcome";
 import LanguageContext from "./context/LanguageContext";
+import GitHubUser from "./components/GithubUser";
+import CurrentLocation from "./components/CurrentLocation";
 
 const App = () => {
     const [language, setLanguage] = useState('en');
@@ -69,6 +71,8 @@ const App = () => {
                 <Container title={"Titolo Casuale"} 
                     children={<p>Clicca sul titolo per far scomparire questo paragrafo</p>}/>
                 <GithubUsersList />
+                <GitHubUser username={"GiuseppeMattera"} />
+                <CurrentLocation />
             </div>
         </>
     )
