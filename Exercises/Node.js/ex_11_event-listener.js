@@ -20,7 +20,6 @@ function createNewsFeed() {
 
 const newsFeed = createNewsFeed();
 
-// Attach event listeners
 newsFeed.on("newsEvent", data => {
     console.log("News Event:", data);
 });
