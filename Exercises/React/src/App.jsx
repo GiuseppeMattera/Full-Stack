@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import AllertClock from "./components/AllertClock";
 import Clock from "./components/Clock";
 import Color from "./components/Color";
@@ -19,6 +20,8 @@ import Welcome from "./components/Welcome";
 import LanguageContext from "./context/LanguageContext";
 import GitHubUser from "./components/GithubUser";
 import CurrentLocation from "./components/CurrentLocation";
+import WelcomeRoutes from "./components/WelcomeRoutes";
+import ShowGithubUser from "./components/ShowGithubUser";
 
 const App = () => {
     const [language, setLanguage] = useState('en');
@@ -73,6 +76,16 @@ const App = () => {
                 <GithubUsersList />
                 <GitHubUser username={"GiuseppeMattera"} />
                 <CurrentLocation />
+                <BrowserRouter>
+                    <Link to="/">Click for the Welcome!</Link>
+                    <Link to="/counter">Click for the counter!</Link>
+                    <Link to="/users/GiuseppeMattera">Click for the user!</Link>
+                    <Routes>
+                        <Route path="/" element={<WelcomeRoutes name="Jimmy" />} />
+                        <Route path="/counter" element={<Counter />} />
+                        <Route path="/users/:username" element={<ShowGithubUser />}/>
+                    </Routes>
+                </BrowserRouter>
             </div>
         </>
     )
