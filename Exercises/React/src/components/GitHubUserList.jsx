@@ -16,18 +16,18 @@ const GithubUsersList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-              const response = await fetch(`https://api.github.com/users/${inputData}`);
-              const result = await response.json();
-      
-              if (response.ok) {
-                setData([...data, result])
-              } else {
-                throw new Error("Data not found");
-              }
+                const response = await fetch(`https://api.github.com/users/${inputData}`);
+                const result = await response.json();
+
+                if (response.ok) {
+                    setData([...data, result])
+                } else {
+                    throw new Error("Data not found");
+                }
             } catch (error) {
-              console.log(error.message);
+                console.log(error.message);
             }
-          }
+        }
         fetchData();
     }, [actualUser])
 
@@ -40,15 +40,15 @@ const GithubUsersList = () => {
             <ul className="flex flex-wrap gap-12">
                 {
                     data.length > 0 ?
-                    data.map((item, index) => (
-                        <li key={index}>
-                            <img className="h-[50px] w-[50px]" src={item.avatar_url} />
-					        <div>{item.login}</div>
-					        <div>{item.name}</div>
-                        </li>
-                    ))
-                    :
-                    <p>Empty Data</p>
+                        data.map((item, index) => (
+                            <li key={index}>
+                                <img className="h-[50px] w-[50px]" src={item.avatar_url} />
+                                <div>{item.login}</div>
+                                <div>{item.name}</div>
+                            </li>
+                        ))
+                        :
+                        <p>Empty Data</p>
                 }
             </ul>
         </>

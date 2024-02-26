@@ -42,18 +42,18 @@ const App = () => {
                 <Hello />
                 <Message />
                 <Welcome name={<strong>Giuseppe</strong>} age="30" />
-                <AllertClock onClick={HandleShowTime} label={"Click me for the current time!"}/>
+                <AllertClock onClick={HandleShowTime} label={"Click me for the current time!"} />
                 <Counter />
                 <Prova />
                 <button onClick={() => handleSetLanguage('it')} className="w-fit px-3 py-2 text-xs font-medium 
                         text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800
                         focus:ring-4 focus:outline-none focus:ring-blue-300">
-                            ITA
+                    ITA
                 </button>
                 <button onClick={() => handleSetLanguage('en')} className="w-fit px-3 py-2 text-xs font-medium 
                         text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 
                         focus:ring-4 focus:outline-none focus:ring-blue-300">
-                            ENG
+                    ENG
                 </button>
                 <LanguageContext.Provider value={language}>
                     <Clock />
@@ -63,16 +63,16 @@ const App = () => {
                 <Login />
                 <UncontrolledLogin />
                 <FocusableInput />
-                <Color color={{id: 1, name: "Red"}} />
+                <Color color={{ id: 1, name: "Red" }} />
                 <Colors colors={[
-                    {id: 1, name: "Red"},
-                    {id: 2, name: "Blue"},
-                    {id: 3, name: "Green"},
-                    {id: 4, name: "White"},
+                    { id: 1, name: "Red" },
+                    { id: 2, name: "Blue" },
+                    { id: 3, name: "Green" },
+                    { id: 4, name: "White" },
                 ]} />
                 <TodoList />
-                <Container title={"Titolo Casuale"} 
-                    children={<p>Clicca sul titolo per far scomparire questo paragrafo</p>}/>
+                <Container title={"Titolo Casuale"}
+                    children={<p>Clicca sul titolo per far scomparire questo paragrafo</p>} />
                 <GithubUsersList />
                 <GitHubUser username={"GiuseppeMattera"} />
                 <CurrentLocation />
@@ -83,7 +83,13 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<WelcomeRoutes name="Jimmy" />} />
                         <Route path="/counter" element={<Counter />} />
-                        <Route path="/users/:username" element={<ShowGithubUser />}/>
+                        <Route path="/users/:username" element={<ShowGithubUser />} />
+                    </Routes>
+                </BrowserRouter>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<p>Add a user and select it</p>} />
+                        <Route path="/users" element={<GithubUsersList />} />
                     </Routes>
                 </BrowserRouter>
             </div>
