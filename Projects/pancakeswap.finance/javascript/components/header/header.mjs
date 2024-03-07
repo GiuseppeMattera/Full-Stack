@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let distance = 0;
 
     const cdTiming = () => {
-        const countDownDate = new Date("Jan 30, 2024 15:37:25").getTime();
+        const countDownDate = new Date("Mar 30, 2024 15:37:25").getTime();
         const now = new Date().getTime();
 
         distance = countDownDate - now;
