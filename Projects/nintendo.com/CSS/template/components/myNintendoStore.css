@@ -1,0 +1,101 @@
+.my-nintendo-store{
+    border-bottom: 1px lightgrey solid;
+}
+
+.my-nintendo-store__general {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    max-width: 1220px;
+    margin-left: 26px;
+    margin-right: 26px;
+}
+
+#store-title {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-lg);
+    color: var(--color-inverse);
+}
+
+#store-text {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-lg);
+    line-height: 29px;
+    color: var(--color-inverse);
+    margin-right: 35px;
+}
+
+.my-nintendo-store__box-footer {
+    flex-direction: row;
+}
+
+
+#image-HH {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#image-HGG {
+    display: none;
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.my-nintendo-store__box-footer > button > a {
+    min-width: max-content;
+}
+
+@media (max-width: 1024px) {
+    .my-nintendo-store__general{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .my-nintendo-store__box-footer {
+        display: block;
+    }
+    .my-nintendo-store__box-footer-paragraph {
+        max-width: 972px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .my-nintendo-store__box-footer-button {
+        max-width: 972px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 32px;
+    }
+
+    .my-nintendo-store__box-footer-button > button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-nintendo-store__general{
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    #image-HH{
+       display: none;
+    }
+    #image-HGG{
+        display:block;
+    }
+}
+
+@media (max-width: 640px) {
+    .my-nintendo-store__general{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    
+    .my-nintendo-store__box-footer-button > button {
+        width: 100%;
+    }
+}

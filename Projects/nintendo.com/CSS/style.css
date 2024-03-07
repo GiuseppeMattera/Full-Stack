@@ -1,0 +1,14 @@
+@import url("./template/root.css");
+@import url("./template/reset.css");
+@import url("./template/utility.css");
+@import url("./template/main.css");
+@import url("./template/components/navbar.css");
+@import url("./template/components/header.css");
+@import url("./template/components/card-feature.css");
+@import url("./template/components/myNintendoStore.css");
+@import url("./template/components/gamingSystem.css");
+@import url("./template/components/news.css");
+@import url("./template/components/characters.css");
+@import url("./template/components/digital_best_sellers.css");
+@import url("./template/components/digital_new_releases.css");
+@import url("./template/components/footer-marta.css");

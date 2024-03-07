@@ -1,0 +1,75 @@
+.gaming-systems{
+    border-bottom: 1px lightgrey solid;
+}
+
+#ga-sy-title {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-lg);
+    color: var(--color-inverse);
+}
+
+#ga-sy-text {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-lg);
+    line-height: 29px;
+    color: var(--color-inverse);
+    margin-right: 35px;
+}
+
+.gaming-systems__box-footer {
+    flex-direction: row;
+}
+
+.gaming-systems__general {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    max-width: 1220px;
+    margin-left: 26px;
+    margin-right: 26px;
+    
+}
+
+#image-NW {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.gaming-systems__box-footer>p {
+    padding-right: 35px;
+}
+
+@media (max-width: 1024px) {
+    .gaming-systems__box-footer {
+        display: block;
+    }
+    .gaming-systems__box-footer-paragraph {
+        max-width: 972px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .gaming-systems__box-footer-button{
+        max-width: 972px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 32px;
+    }
+
+    .gaming-systems__box-footer-button > button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .gaming-systems__general{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    
+    .gaming-systems__box-footer-button > button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+* {
+  font-family: var(--font-family) !important;
+}
+
+.card__game-title {
+  color: var(--color-inverse);
+  font-weight: var(--font-weight-lg);
+  font-size: var(--font-size-md);
+}
+
+.card:hover h3 {
+  color: var(--color-primary);
+}
+
+.a-link {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-lg);
+  font-size: var(--font-size-md);
+  border-bottom: 2px solid;
+}
+
+.a-link:hover {
+  color: var(--color-hover);
+}
+
+.a-link-footer {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-lg);
+  font-size: var(--font-size-md);
+}
+
+.a-link-footer:hover {
+  color: var(--color-hover);
+  border-bottom: 2px solid;
+  transition: ease-in-out 0.1s;
+}
+
+.a-link-footer-title {
+  color: var(--color-inverse);
+  font-weight: var(--font-weight-lg);
+  font-size: var(--font-size-lg);
+}
+
+.a-link-footer-title:hover {
+  color: var(--color-inverse);
+  border-bottom: 2px solid;
+  border-color: var(--color-hover);
+  transition: ease-in-out 0.1s;
+}
