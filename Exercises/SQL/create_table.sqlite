@@ -1,0 +1,11 @@
+CREATE TABLE Books (
+    book_id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    author TEXT NOT NULL,
+    genre TEXT VARCHAR(1),
+    published_year INTEGER,
+    isbn TEXT,
+    price REAL,
+    rating REAL,
+    stock_count INTEGER
+);
