@@ -1,0 +1,45 @@
+-- download table from https://www.kaggle.com/datasets/brendan45774/test-file?resource=download
+
+-- List of tasks:
+
+-- Display female passengers who survived and are older than 30.
+-- Find the average age of men who didn't survive.
+-- Display information for passengers who spent between $20 and $50 on their tickets and got on the ship at port 'C'."
+-- Find the total number of the survivors in the first class.
+-- Show the information of passengers who boarded from Cherbourg (port 'C') and spent more than $75 on their tickets.".
+
+-- prima task
+
+SELECT * 
+FROM tested1 
+WHERE Survived = 1 
+AND Sex = 'female' 
+AND Age > 30;
+
+-- seconda task
+
+SELECT AVG(Age)
+FROM tested1 
+WHERE Survived = 0 
+AND Sex = 'male';
+
+-- terza task
+
+SELECT * 
+FROM tested1 
+WHERE Fare BETWEEN 20 AND 50 
+AND Embarked = 'C';
+
+-- quarta task
+
+SELECT COUNT(*) 
+FROM tested1 
+WHERE Survived = 1 
+AND Pclass = 1;
+
+-- quinta task
+
+SELECT * 
+FROM tested1 
+WHERE Embarked = 'C' 
+AND Fare > 75;
