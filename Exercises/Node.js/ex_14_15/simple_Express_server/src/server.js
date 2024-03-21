@@ -3,6 +3,7 @@ import "express-async-errors";
 import morgan from "morgan";
 import { getAll, getOneById, create, deleteById, updateById, createImage } from './controllers/planets.js';
 import multer from "multer";
+import { logIn, signUp } from './controllers/users.js';
 
 const app = express();
 const port = 3000;
@@ -30,7 +31,10 @@ app.put('/api/planets/:id', updateById);
 
 app.delete('/api/planets/:id', deleteById);
 
-app.post('/api/planets/:id/image', upload.single("image"), createImage)
+app.post('/api/planets/:id/image', upload.single("image"), createImage);
+
+app.post('/api/users/login', logIn);
+app.post('/api/users/signup', signUp);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
