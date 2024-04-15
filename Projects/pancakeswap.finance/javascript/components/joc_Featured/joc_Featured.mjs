@@ -16,9 +16,15 @@ const toggleDivs = () => {
   jocSecondDiv.classList.toggle("hidden");
 };
 
+// questa commentata è la parte di ilyasse che faceva lo scatto, è da sistemare
+
+// const switchJocDivs = () => {
+//   clearInterval(intervalId);
+//   intervalId = setInterval(toggleDivs, 6000);
+// };
+
 const switchJocDivs = () => {
-  clearInterval(intervalId);
-  intervalId = setInterval(toggleDivs, 6000);
+  intervalId = toggleDivs;
 };
 
 const eventListeners = () => {
