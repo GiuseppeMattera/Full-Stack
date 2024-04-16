@@ -2,7 +2,7 @@ export const header = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     //ANCHOR - swipper
-    const spans = document.querySelectorAll('.z-6 span');
+    const spans = document.querySelectorAll('.div_span_container span');
     const containerSpan = document.getElementById('span_container')
     spans[0].classList.add('active');
     let timer;
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            // document.getElementById("demo").innerHTML = "EXPIRED";
         }
     }, 1000);
 

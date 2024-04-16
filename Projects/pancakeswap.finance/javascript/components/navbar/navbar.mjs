@@ -144,8 +144,6 @@ export const navbar = () => {
     
       const renderMenuList = () => {
         const last = Object.keys(selectMap).pop()
-        console.log(last);
-        console.log(selectMap);
         Object.entries(selectMap).forEach(([key, item], index) => {
           $menuItemList.innerHTML += `
             <li data-id="${key}" class="${last === key ? "rounded-b-lg" : ""} flex bg-white dark:bg-color_fourth items-center h-12 w-full px-4 hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text dark:text-white group/element flex gap-[10px] cursor-pointer mb-[5px] menu-item${index == 0 ? " active" : ""}">
